@@ -9,7 +9,7 @@ Rowlytics is a web based application that will help rowers to improve their rowi
 - Evan Osborne
 
 ## Getting started
-1. Ensure Python 3.12+ and `pip` are installed.
+1. Make sure Python and `pip` are installed.
 2. (Optional) Create and activate a virtual environment.
 3. Install dependencies and register pre-commit hooks:
    ```bash

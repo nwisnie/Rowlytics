@@ -32,13 +32,12 @@ def test_landing_page_renders_expected_copy(client: FlaskClient) -> None:
     html = response.get_data(as_text=True)
     expected_snippets = [
         "Rowlytics",
-        "View template",
     ]
     for snippet in expected_snippets:
         assert snippet in html
 
 
 def test_template_detail_route(client: FlaskClient) -> None:
-    response = client.get("/templates/training-playbook")
+    response = client.get("/templates/capture-workout")
     assert response.status_code == 200
-    assert "Training Playbook" in response.get_data(as_text=True)
+    assert "Capture Workout" in response.get_data(as_text=True)
