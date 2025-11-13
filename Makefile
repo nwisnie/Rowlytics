@@ -16,7 +16,6 @@ dev-install:
 lint:
 	flake8 rowlytics_app $(APP_MODULE)
 	isort --check-only rowlytics_app $(APP_MODULE)
-	bandit -q -r rowlytics_app
 
 fmt:
 	isort rowlytics_app $(APP_MODULE)

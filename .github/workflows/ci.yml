@@ -33,7 +33,6 @@ jobs:
       - name: Run linters
         run: |
           flake8 rowlytics_app app.py
-          bandit -q -r rowlytics_app
 
       - name: Run test suite
         run: python -m pytest

@@ -21,7 +21,7 @@ Rowlytics is a web based application that will help rowers to improve their rowi
    ```
 
 ## Quality gates
-- `make lint` runs flake8, isort, and bandit.
+- `make lint` runs flake8 and isort.
 - `make test` runs pytest.
 - `make check` runs both lint + tests.
 - `.pre-commit-config.yaml` mirrors the CI checks locally. Enable it with `pre-commit install` (already done via `make dev-install`).
