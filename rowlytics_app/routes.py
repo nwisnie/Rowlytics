@@ -16,6 +16,7 @@ class TemplateCard:
     title: str
     blurb: str
     image_path: str
+    template_name: str
 
 
 TEMPLATE_CARDS: tuple[TemplateCard, ...] = (
@@ -24,24 +25,28 @@ TEMPLATE_CARDS: tuple[TemplateCard, ...] = (
         title="Capture Workout",
         blurb="Record your workout and get feedback live.",
         image_path="images/camera_cool.png",
+        template_name="capture_workout.html",
     ),
     TemplateCard(
         slug="snapshot-library",
         title="Snapshot Library",
         blurb="View important moments captured during workouts.",
         image_path="images/snapshot_cool.png",
+        template_name="snapshot_library.html",
     ),
     TemplateCard(
         slug="workout-summaries",
         title="Workout Summaries",
         blurb="View summaries and analytics from previous workouts.",
         image_path="images/folder_cool.png",
+        template_name="workout_summaries.html",
     ),
     TemplateCard(
         slug="team-view",
         title="Team View",
         blurb="Join a team of like minded athletes and track collective progress.",
         image_path="images/team_cool.png",
+        template_name="team_view.html",
     ),
 )
 
@@ -67,4 +72,4 @@ def template_detail(slug: str) -> str:
     card = _get_card(slug)
     if card is None:
         abort(404)
-    return render_template("template_detail.html", card=card)
+    return render_template(card.template_name, card=card)

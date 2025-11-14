@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ card.title }} | Rowlytics Template</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body class="detail">
+    <main class="detail__wrapper">
+      <a class="detail__back" href="{{ url_for('public.landing_page') }}">Back to templates</a>
+      <section class="detail__card">
+        <img src="{{ url_for('static', filename=card.image_path) }}" alt="{{ card.title }}" />
+        <div>
+          <h1>{{ card.title }}</h1>
+          <p>{{ card.blurb }}</p>
+          <br>
+          <p>
+            View important moments captured during workouts.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

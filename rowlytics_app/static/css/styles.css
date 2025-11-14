@@ -108,29 +108,6 @@ a {
   box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
 }
 
-.footer {
-  min-height: 25vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem clamp(1rem, 5vw, 4rem);
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.footer__socials,
-.footer__links {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  color: var(--gray);
-}
-
-.footer__links a {
-  font-weight: 600;
-  color: var(--dark);
-}
-
 @media (max-width: 768px) {
   .quadrant {
     grid-template-columns: 1fr;
@@ -177,5 +154,118 @@ a {
 @media (max-width: 640px) {
   .detail__card {
     grid-template-columns: 1fr;
+  }
+}
+
+.capture {
+  background: #f5f7fb;
+  color: #0f172a;
+}
+
+.capture__header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 1rem clamp(1.5rem, 5vw, 3rem);
+}
+
+.capture__header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.capture__branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.capture__back {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.capture__back:hover {
+  text-decoration: underline;
+}
+
+.capture__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 2.5rem clamp(1rem, 6vw, 5rem);
+}
+
+.capture__frame {
+  width: 100%;
+  max-width: 960px;
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.08);
+}
+
+.capture__image {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
+
+.capture__controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.capture__controls .btn {
+  border-radius: 6px;
+  padding: 0.6rem 2.4rem;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.btn--subtle {
+  background: #e5e7eb;
+  color: #6b7280;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--subtle:hover {
+  background: #d4d4d8;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--danger {
+  background: #ef4444;
+}
+
+.btn--danger:hover {
+  background: #dc2626;
+}
+
+.btn--dark {
+  background: #374151;
+}
+
+.btn--dark:hover {
+  background: #111827;
+}
+
+@media (max-width: 768px) {
+  .capture__frame {
+    padding: 1.5rem;
+  }
+
+  .capture__controls {
+    flex-direction: column;
+  }
+
+  .capture__controls .btn {
+    width: 100%;
+    text-align: center;
   }
 }
