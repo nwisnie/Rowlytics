@@ -61,10 +61,7 @@ def _get_card(slug: str) -> TemplateCard | None:
 
 @public_bp.route("/")
 def landing_page() -> str:
-    return render_template(
-        "index.html",
-        cards=_iter_cards(),
-    )
+    return render_template("index.html")
 
 
 @public_bp.route("/templates/<slug>")

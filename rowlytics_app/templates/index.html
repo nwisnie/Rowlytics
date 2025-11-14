@@ -23,22 +23,77 @@
     </header>
 
     <main class="quadrants">
-      {% for card in cards %}
       <section class="quadrant">
         <img
-          src="{{ url_for('static', filename=card.image_path) }}"
-          alt="{{ card.title }}"
+          src="{{ url_for('static', filename='images/camera_cool.png') }}"
+          alt="Capture Workout"
           loading="lazy"
         />
         <div class="quadrant__copy">
-          <h2>{{ card.title }}</h2>
-          <p>{{ card.blurb }}</p>
-          <a class="btn btn--primary" href="{{ url_for('public.template_detail', slug=card.slug) }}">
+          <h2>Capture Workout</h2>
+          <p>Record your workout and get feedback live.</p>
+          <a
+            class="btn btn--primary"
+            href="{{ url_for('public.template_detail', slug='capture-workout') }}"
+          >
             Get Started
           </a>
         </div>
       </section>
-      {% endfor %}
+
+      <section class="quadrant">
+        <img
+          src="{{ url_for('static', filename='images/snapshot_cool.png') }}"
+          alt="Snapshot Library"
+          loading="lazy"
+        />
+        <div class="quadrant__copy">
+          <h2>Snapshot Library</h2>
+          <p>View important moments captured during workouts.</p>
+          <a
+            class="btn btn--primary"
+            href="{{ url_for('public.template_detail', slug='snapshot-library') }}"
+          >
+            Get Started
+          </a>
+        </div>
+      </section>
+
+      <section class="quadrant">
+        <img
+          src="{{ url_for('static', filename='images/folder_cool.png') }}"
+          alt="Workout Summaries"
+          loading="lazy"
+        />
+        <div class="quadrant__copy">
+          <h2>Workout Summaries</h2>
+          <p>View summaries and analytics from previous workouts.</p>
+          <a
+            class="btn btn--primary"
+            href="{{ url_for('public.template_detail', slug='workout-summaries') }}"
+          >
+            Get Started
+          </a>
+        </div>
+      </section>
+
+      <section class="quadrant">
+        <img
+          src="{{ url_for('static', filename='images/team_cool.png') }}"
+          alt="Team View"
+          loading="lazy"
+        />
+        <div class="quadrant__copy">
+          <h2>Team View</h2>
+          <p>Join a team of like minded athletes and track collective progress.</p>
+          <a
+            class="btn btn--primary"
+            href="{{ url_for('public.template_detail', slug='team-view') }}"
+          >
+            Get Started
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
