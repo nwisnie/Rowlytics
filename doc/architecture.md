@@ -1,5 +1,6 @@
-.github/workflows/
-rowlytics_app/static/
-rowlytics_app/templates/
-scripts/
-tests/
+.github/workflows/ <br>
+doc/ <br>
+rowlytics_app/static/ <br>
+rowlytics_app/templates/ <br>
+scripts/ <br>
+tests/ <br>
